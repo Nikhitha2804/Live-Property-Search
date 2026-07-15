@@ -1,0 +1,22 @@
+# Ignore datasets
+# Virtual environment
+.venv/
+venv/
+
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# VS Code
+.vscode/
+
+# Large datasets
+data/600K US Housing Properties.csv
+data/cleaned_data.csv
+
+# Reports
+data/cleaning_report.json
+data/data_quality_report.json

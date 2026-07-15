@@ -1,0 +1,267 @@
+body {
+    background-color: #f1f5f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1e293b;
+}
+
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.navbar .navbar-brand {
+    font-weight: 700;
+    color: #3E5879;
+}
+
+.navbar .text-muted {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.navbar .btn-outline-secondary {
+    border-color: #dc3545;
+    color: #dc3545;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.navbar .btn-outline-secondary:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #3E5879, #2e3e54);
+    color: #ffffff;
+    padding: 70px 20px 50px;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+/* Search Container */
+.search-container {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    margin-top: -50px;
+    margin-bottom: 30px;
+    box-shadow: 0 12px 50px rgba(62, 88, 121, 0.08);
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.search-input {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 14px 25px;
+    border: 2px solid #2e3e54;
+    border-radius: 50px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #f8fafc;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #2c2e31;
+    box-shadow: 0 0 0 0.25rem rgba(62, 88, 121, 0.25);
+}
+
+.search-btn {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    background-color: #3E5879;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-btn:hover {
+    background-color: #2e3e54;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Loading Spinner */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #3E5879;
+}
+
+.loading .spinner-border {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-color: #3E5879;
+    border-right-color: transparent;
+}
+#resultsTable {
+    font-size: 0.95rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(62, 88, 121, 0.06);
+}
+
+#resultsTable th {
+    background-color: #3E5879;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px;
+    white-space: nowrap;
+}
+
+#resultsTable td {
+    padding: 10px 12px;
+    vertical-align: middle;
+    text-align: center;
+    color: #1e293b;
+}
+
+#resultsTable tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+#resultsTable tr:hover {
+    background-color: #e0e7ef;
+    transition: background-color 0.2s ease;
+}
+
+/* Button inside table (like View Details) */
+#resultsTable .btn {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background-color: #3E5879;
+    color: white;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+#resultsTable .btn:hover {
+    background-color: #2e3e54;
+}
+
+/* Responsive table container */
+.table-responsive {
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow-x: auto;
+}
+/* Fix DataTables header layout and spacing */
+table.dataTable th {
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    padding-right: 1.5rem; /* Add space for sort icon */
+    position: relative;
+}
+
+/* Ensure the sorting icons do not overlap text */
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:after {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    opacity: 0.7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #resultsTable {
+        font-size: 0.85rem;
+    }
+
+    table.dataTable th,
+    table.dataTable td {
+        padding: 8px 10px;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+/* Override the logout button to be solid red always */
+.navbar .btn-logout {
+    background-color: #dc3545 !important;  /* Bootstrap red */
+    color: #fff !important;
+    border: none;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .btn-logout:hover {
+    background-color: #bb2d3b !important;  /* Darker red on hover */
+    color: #fff !important;
+}
+
+.btn-grey {
+  background-color: #444;
+  color: #fff;
+  border: none;
+}
+
+.btn-grey:hover {
+  background-color: #333;
+}
+.advanced-filter-btn {
+  background-color: #e0e0e0;  /* light grey */
+  color: #333;
+  border: 1px solid #ccc;
+  transition: background-color 0.2s ease;
+}
+
+.advanced-filter-btn:hover {
+  background-color: #444;     /* dark grey */
+  color: #fff;
+  border-color: #444;
+}
+/* Override the blue focus border with dark gray */
+.search-input:focus {
+  border-color: #343a40 !important; /* Dark gray */
+  box-shadow: 0 0 0 0.25rem rgba(52, 58, 64, 0.25) !important;
+}
+#customPaginationContainer .pagination {
+  justify-content: center;
+}
+.hero-section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideIn 1.2s ease-out forwards;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
