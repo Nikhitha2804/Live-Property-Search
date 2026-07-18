@@ -140,6 +140,14 @@ Live-Property-Search/
 
 ---
 
+## Author
+
+**Nikhitha Odela**
+
+- GitHub: https://github.com/Nikhitha2804
+
+---
+
 ## License
 
 This project is created for educational and portfolio purposes.
